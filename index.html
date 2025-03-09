@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>我的翻唱歌曲</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 密码输入框 -->
+    <div id="login">
+        <h1>欢迎访问我的音乐空间🎵</h1>
+        <input type="password" id="password" placeholder="请输入密码">
+        <button onclick="checkPassword()">进入</button>
+    </div>
+
+    <!-- 隐藏的内容（输入正确密码后显示） -->
+    <div id="content" style="display:none;">
+        <h2>我的翻唱作品</h2>
+        <audio controls>
+            <source src="song1.mp3" type="audio/mpeg">
+            你的浏览器不支持音频播放。
+        </audio>
+        <!-- 可添加更多音频 -->
+    </div>
+
+    <script>
+        // 密码验证（替换YOUR_PASSWORD为你设定的密码）
+        function checkPassword() {
+            const password = "srklxiaoyanyan"; 
+            const input = document.getElementById("password").value;
+            if (input === password) {
+                document.getElementById("login").style.display = "none";
+                document.getElementById("content").style.display = "block";
+            } else {
+                alert("密码错误，请重试！");
+            }
+        }
+    </script>
+</body>
+</html>
