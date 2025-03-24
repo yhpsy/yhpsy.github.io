@@ -50,5 +50,35 @@
             }
         }
     </script>
+    <script>
+// 爱心生成器
+function createHearts() {
+    // 生成50个爱心
+    for(let i = 0; i < 50; i++) {
+        const heart = document.createElement('div');
+        heart.className = 'heart';
+        heart.innerHTML = '❤';
+        
+        // 随机设置初始位置和动画延迟
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDelay = Math.random() * 5 + 's';
+        heart.style.fontSize = Math.random() * 20 + 10 + 'px'; // 随机大小
+        
+        document.body.appendChild(heart);
+    }
+}
+
+// 页面加载完成后启动动画
+window.onload = function() {
+    createHearts();
+    
+    // 每隔10秒补充新的爱心（可选）
+    setInterval(() => {
+        createHearts();
+    }, 10000);
+};
+</script>
+</body>
+</html>
 </body>
 </html>
