@@ -15,10 +15,16 @@
     <!-- 隐藏的内容（输入正确密码后显示） -->
     <div id="content" style="display:none;">
         <h2>我的翻唱作品</h2>
-        <audio controls>
-            <source src="song1.mp3" type="audio/mpeg">
-            你的浏览器不支持音频播放。
+        <div class="song-item">
+        <h3>夏天的风</h3>
+        <audio controls controlsList="nodownload">
+            <!-- 建议准备多种格式 -->
+            <source src="music/漂亮.mp3" type="audio/mpeg">
+            <source src="music/漂亮.ogg" type="audio/ogg">
+            您的浏览器不支持音频播放
         </audio>
+        <p>录制时间：2025.3.24</p>
+    </div>
         <!-- 可添加更多音频 -->
     </div>
 
